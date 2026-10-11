@@ -1,5 +1,7 @@
 ARC-Play – Hardware-Komponenten
 ================================
+Platine: ARC_AP
+Verdrahtung: hardware/wiring/ARC-Play_Verdrahtung.svg
 
 Mikrocontroller
 ---------------
@@ -13,6 +15,7 @@ U7   PCM5102A Audio-DAC (I2S)          LTC- und WAV-Ausgabe
 U3   LM358 Operationsverstärker        Eingangsstufe für eingehenden LTC
 U6   SN74HC14N Schmitt-Trigger         Signalaufbereitung LTC-Eingang -> GPIO4
 J2   3,5 mm Klinkenbuchse (TRS)        "TC In/Out" – Timecode-Ein-/Ausgang
+J3   3,5 mm Klinkenbuchse (TRS)        "Playback Out" – Song-Audio (OUTR)
 R1   100 kΩ                            Widerstand (THT, 0207)
 R2   100 kΩ                            Widerstand (THT, 0207)
 R3   1 MΩ                              Widerstand (THT, 0207)
@@ -23,7 +26,8 @@ C2   10 nF                             Kondensator
 Echtzeituhr
 -----------
 U2   DS3231(M) RTC-Modul               I2C: SDA GPIO42, SCL GPIO41, SQW (1 Hz) GPIO5
-     CR2032-Knopfzelle für RTC         [?] falls Modul mit Batteriehalter
+                                       SQW ist verbunden, fehlt aber im KiCad-Schaltplan
+     CR2032-Knopfzelle für RTC         bei ZS-042-Modulen Ladediode entfernen
 
 Speicher
 --------
@@ -39,7 +43,8 @@ SW1  Drehencoder mit Taster (KY-040)   CLK GPIO38, DT GPIO39, SW GPIO40
 
 Stromversorgung
 ---------------
-J4   Stromversorgungs-Anschluss (2-pin) bisher nur USB
+     USB-C am DevKit                   aktuelle Stromversorgung (5 V)
+J4   Stromversorgungs-Anschluss (2-pin) optional externe 3,3 V – nie gleichzeitig mit USB
 
 Mechanik
 --------

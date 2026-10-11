@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1220" viewBox="0 0 1900 1220" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect x="0" y="0" width="1900" height="1220" fill="#ffffff"/>
+<text x="40" y="46" font-size="24" text-anchor="start" font-weight="bold" fill="#222222">ARC-Play – Verdrahtung der ARC_AP-Platine</text>
+<text x="40" y="72" font-size="13" text-anchor="start" font-weight="normal" fill="#555">ESP32-S3-DevKitC-1 N16R8 · Module stecken direkt auf den Headern · Stand 2026-10-11 · Pinabstände nicht maßstäblich</text>
+<rect x="700" y="300" width="540" height="520" rx="10" fill="#eef6ee" stroke="#2e7d32" stroke-width="2.5"/>
+<text x="970.0" y="370" font-size="15" text-anchor="middle" font-weight="bold" fill="#2e7d32">ARC_AP-Platine (unverändert)</text>
+<rect x="800" y="380" width="240" height="230" rx="6" fill="#ffffff" stroke="#455a64" stroke-width="2"/>
+<text x="920" y="410" font-size="14" text-anchor="middle" font-weight="bold" fill="#222222">U1  ESP32-S3-DevKitC-1</text>
+<text x="920" y="430" font-size="11" text-anchor="middle" font-weight="normal" fill="#555">N16R8 (16 MB Flash, 8 MB PSRAM)</text>
+<text x="815" y="462" font-size="11" text-anchor="start" font-weight="normal" fill="#333">I2S → U7: BCK 18 · LRCK 17 · DIN 16</text>
+<text x="815" y="481" font-size="11" text-anchor="start" font-weight="normal" fill="#333">XSMT (Mute) → U7: GPIO3</text>
+<text x="815" y="500" font-size="11" text-anchor="start" font-weight="normal" fill="#333">LTC-Eingang ← U6: GPIO4</text>
+<text x="815" y="519" font-size="11" text-anchor="start" font-weight="normal" fill="#333">I2C → U2: SDA 42 · SCL 41</text>
+<text x="815" y="538" font-size="11" text-anchor="start" font-weight="normal" fill="#333">SQW ← U2: GPIO5</text>
+<text x="815" y="557" font-size="11" text-anchor="start" font-weight="normal" fill="#333">GPIO35–37: PSRAM, nicht nutzen</text>
+<rect x="990" y="596" width="40" height="18" rx="3" fill="#cfd8dc" stroke="#455a64" stroke-width="1.5"/>
+<text x="985" y="600" font-size="10" text-anchor="end" font-weight="normal" fill="#455a64">USB-C: Stromversorgung</text>
+<rect x="720" y="640" width="125" height="80" rx="6" fill="#ffffff" stroke="#455a64" stroke-width="1.5"/>
+<text x="782" y="662" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">U7 PCM5102A</text>
+<text x="782" y="679" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">I2S-DAC</text>
+<text x="782" y="696" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">OUTL → J2 · OUTR → J3</text>
+<rect x="860" y="640" width="130" height="80" rx="6" fill="#ffffff" stroke="#455a64" stroke-width="1.5"/>
+<text x="925" y="662" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">LTC-Eingangsstufe</text>
+<text x="925" y="679" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">U3 LM358 + U6 74HC14</text>
+<text x="925" y="696" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">R1–R4, C1, C2 → GPIO4</text>
+<rect x="1050" y="640" width="120" height="80" rx="6" fill="#ffffff" stroke="#455a64" stroke-width="1.5"/>
+<text x="1110" y="662" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">U2 DS3231-Modul</text>
+<text x="1110" y="679" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">SDA 42 · SCL 41</text>
+<text x="1110" y="696" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">SQW → GPIO5 *</text>
+<polyline points="830,610 830,640" fill="none" stroke="#7a8a7a" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="925,610 925,640" fill="none" stroke="#7a8a7a" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1020,560 1110,560 1110,640" fill="none" stroke="#7a8a7a" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="880" y="790" width="80" height="60" rx="6" fill="#ffffff" stroke="#8c564b" stroke-width="2"/>
+<text x="920" y="812" font-size="11" text-anchor="middle" font-weight="bold" fill="#222222">J2</text>
+<text x="920" y="827" font-size="11" text-anchor="middle" font-weight="bold" fill="#222222">TC In/Out</text>
+<text x="920" y="843" font-size="10" text-anchor="middle" font-weight="normal" fill="#666">3,5 mm</text>
+<polyline points="782,720 782,760 900,760 900,790" fill="none" stroke="#8c564b" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="925,720 925,745 930,745 930,790" fill="none" stroke="#8c564b" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1060" y="790" width="80" height="60" rx="6" fill="#ffffff" stroke="#8c564b" stroke-width="2"/>
+<text x="1100" y="812" font-size="11" text-anchor="middle" font-weight="bold" fill="#222222">J3</text>
+<text x="1100" y="827" font-size="11" text-anchor="middle" font-weight="bold" fill="#222222">Playback Out</text>
+<text x="1100" y="843" font-size="10" text-anchor="middle" font-weight="normal" fill="#666">Song (OUTR)</text>
+<polyline points="820,720 820,775 1100,775 1100,790" fill="none" stroke="#8c564b" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="691" y="344" width="18" height="272" rx="3" fill="#263238" stroke="#263238" stroke-width="1.5"/>
+<text x="714" y="338" font-size="12" text-anchor="start" font-weight="bold" fill="#222222">U4</text>
+<rect x="696" y="356" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="716" y="364" font-size="11" text-anchor="start" font-weight="normal" fill="#222222">1 3V3</text>
+<rect x="696" y="386" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="716" y="394" font-size="11" text-anchor="start" font-weight="normal" fill="#222222">2 GND</text>
+<rect x="696" y="416" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="716" y="424" font-size="11" text-anchor="start" font-weight="normal" fill="#222222">3 IO10</text>
+<rect x="696" y="446" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="716" y="454" font-size="11" text-anchor="start" font-weight="normal" fill="#222222">4 IO8</text>
+<rect x="696" y="476" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="716" y="484" font-size="11" text-anchor="start" font-weight="normal" fill="#222222">5 IO9</text>
+<rect x="696" y="506" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="716" y="514" font-size="11" text-anchor="start" font-weight="normal" fill="#222222">6 IO11</text>
+<rect x="696" y="536" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="716" y="544" font-size="11" text-anchor="start" font-weight="normal" fill="#222222">7 IO12</text>
+<rect x="696" y="566" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="716" y="574" font-size="11" text-anchor="start" font-weight="normal" fill="#222222">8 IO7</text>
+<rect x="696" y="596" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="716" y="604" font-size="11" text-anchor="start" font-weight="normal" fill="#222222">9 IO13</text>
+<rect x="1231" y="344" width="18" height="272" rx="3" fill="#263238" stroke="#263238" stroke-width="1.5"/>
+<text x="1226" y="338" font-size="12" text-anchor="end" font-weight="bold" fill="#222222">J1</text>
+<rect x="1236" y="356" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1224" y="364" font-size="11" text-anchor="end" font-weight="normal" fill="#222">3V3 1</text>
+<rect x="1236" y="386" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1224" y="394" font-size="11" text-anchor="end" font-weight="normal" fill="#222">GND 2</text>
+<rect x="1236" y="416" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1224" y="424" font-size="11" text-anchor="end" font-weight="normal" fill="#222">IO14 3</text>
+<rect x="1236" y="446" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1224" y="454" font-size="11" text-anchor="end" font-weight="normal" fill="#222">IO2 4</text>
+<rect x="1236" y="476" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1224" y="484" font-size="11" text-anchor="end" font-weight="normal" fill="#222">IO15 5</text>
+<rect x="1236" y="506" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1224" y="514" font-size="11" text-anchor="end" font-weight="normal" fill="#9a9a9a">nc 6</text>
+<rect x="1236" y="536" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1224" y="544" font-size="11" text-anchor="end" font-weight="normal" fill="#9a9a9a">nc 7</text>
+<rect x="1236" y="566" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1224" y="574" font-size="11" text-anchor="end" font-weight="normal" fill="#9a9a9a">nc 8</text>
+<rect x="1236" y="596" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1224" y="604" font-size="11" text-anchor="end" font-weight="normal" fill="#9a9a9a">nc 9</text>
+<rect x="874" y="291" width="192" height="18" rx="3" fill="#263238" stroke="#263238" stroke-width="1.5"/>
+<text x="866" y="304" font-size="12" text-anchor="end" font-weight="bold" fill="#222222">SW1</text>
+<rect x="886" y="296" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="890" y="326" font-size="10" text-anchor="middle" font-weight="normal" fill="#222222">1</text>
+<text x="890" y="339" font-size="10" text-anchor="middle" font-weight="normal" fill="#222222">GND</text>
+<rect x="926" y="296" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="930" y="326" font-size="10" text-anchor="middle" font-weight="normal" fill="#222222">2</text>
+<text x="930" y="339" font-size="10" text-anchor="middle" font-weight="normal" fill="#222222">3V3</text>
+<rect x="966" y="296" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="970" y="326" font-size="10" text-anchor="middle" font-weight="normal" fill="#222222">3</text>
+<text x="970" y="339" font-size="10" text-anchor="middle" font-weight="normal" fill="#222222">IO40</text>
+<rect x="1006" y="296" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1010" y="326" font-size="10" text-anchor="middle" font-weight="normal" fill="#222222">4</text>
+<text x="1010" y="339" font-size="10" text-anchor="middle" font-weight="normal" fill="#222222">IO39</text>
+<rect x="1046" y="296" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1050" y="326" font-size="10" text-anchor="middle" font-weight="normal" fill="#222222">5</text>
+<text x="1050" y="339" font-size="10" text-anchor="middle" font-weight="normal" fill="#222222">IO38</text>
+<rect x="744" y="811" width="62" height="18" rx="3" fill="#263238" stroke="#263238" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="738" y="806" font-size="12" text-anchor="end" font-weight="bold" fill="#222222">J4</text>
+<rect x="756" y="816" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<rect x="786" y="816" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="760" y="806" font-size="10" text-anchor="middle" font-weight="normal" fill="#222222">+3V3</text>
+<text x="794" y="806" font-size="10" text-anchor="start" font-weight="normal" fill="#222222">GND</text>
+<rect x="1560" y="30" width="300" height="224" rx="6" fill="#fafafa" stroke="#bbbbbb" stroke-width="1"/>
+<text x="1574" y="52" font-size="13" text-anchor="start" font-weight="bold" fill="#222222">Legende</text>
+<polyline points="1576,70 1616,70" fill="none" stroke="#d62728" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1626" y="74" font-size="12" text-anchor="start" font-weight="normal" fill="#222222">5 V (Leistung)</text>
+<polyline points="1576,90 1616,90" fill="none" stroke="#ff7f0e" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1626" y="94" font-size="12" text-anchor="start" font-weight="normal" fill="#222222">3,3 V</text>
+<polyline points="1576,110 1616,110" fill="none" stroke="#222222" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1626" y="114" font-size="12" text-anchor="start" font-weight="normal" fill="#222222">Masse</text>
+<polyline points="1576,130 1616,130" fill="none" stroke="#1f77b4" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1626" y="134" font-size="12" text-anchor="start" font-weight="normal" fill="#222222">SPI (MOSI / SCK)</text>
+<polyline points="1576,150 1616,150" fill="none" stroke="#9467bd" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1626" y="154" font-size="12" text-anchor="start" font-weight="normal" fill="#222222">Steuer- / GPIO-Signale</text>
+<polyline points="1576,170 1616,170" fill="none" stroke="#8c564b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1626" y="174" font-size="12" text-anchor="start" font-weight="normal" fill="#222222">Audio / LTC</text>
+<polyline points="1576,190 1616,190" fill="none" stroke="#8b0000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1626" y="194" font-size="12" text-anchor="start" font-weight="normal" fill="#222222">Akku (Rohspannung)</text>
+<circle cx="1596" cy="210" r="4.2" fill="#222"/>
+<text x="1626" y="214" font-size="11" text-anchor="start" font-weight="normal" fill="#222222">Verbindungspunkt</text>
+<polyline points="1576,230 1616,230" fill="none" stroke="#9a9a9a" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 4"/>
+<text x="1626" y="234" font-size="11" text-anchor="start" font-weight="normal" fill="#222222">gestrichelt = nicht bestückt / optional</text>
+<rect x="330" y="330" width="270" height="350" rx="6" fill="#ffffff" stroke="#455a64" stroke-width="2"/>
+<text x="346" y="640" font-size="11.5" text-anchor="start" font-weight="normal" fill="#222222">2,4&quot; TFT ILI9341 320×240</text>
+<text x="346" y="656" font-size="11.5" text-anchor="start" font-weight="normal" fill="#222222">SPI · steckt direkt auf U4</text>
+<text x="346" y="672" font-size="11.5" text-anchor="start" font-weight="normal" fill="#222222">Touch/SD des Displays ungenutzt</text>
+<rect x="596" y="356" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="592" y="364" font-size="11" text-anchor="end" font-weight="normal" fill="#222222">VCC</text>
+<polyline points="604,360 696,360" fill="none" stroke="#ff7f0e" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="596" y="386" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="592" y="394" font-size="11" text-anchor="end" font-weight="normal" fill="#222222">GND</text>
+<polyline points="604,390 696,390" fill="none" stroke="#222222" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="596" y="416" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="592" y="424" font-size="11" text-anchor="end" font-weight="normal" fill="#222222">CS</text>
+<polyline points="604,420 696,420" fill="none" stroke="#9467bd" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="596" y="446" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="592" y="454" font-size="11" text-anchor="end" font-weight="normal" fill="#222222">RESET</text>
+<polyline points="604,450 696,450" fill="none" stroke="#9467bd" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="596" y="476" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="592" y="484" font-size="11" text-anchor="end" font-weight="normal" fill="#222222">DC</text>
+<polyline points="604,480 696,480" fill="none" stroke="#9467bd" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="596" y="506" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="592" y="514" font-size="11" text-anchor="end" font-weight="normal" fill="#222222">SDI (MOSI)</text>
+<polyline points="604,510 696,510" fill="none" stroke="#1f77b4" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="596" y="536" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="592" y="544" font-size="11" text-anchor="end" font-weight="normal" fill="#222222">SCK</text>
+<polyline points="604,540 696,540" fill="none" stroke="#1f77b4" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="596" y="566" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="592" y="574" font-size="11" text-anchor="end" font-weight="normal" fill="#222222">LED</text>
+<polyline points="604,570 696,570" fill="none" stroke="#9467bd" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="596" y="596" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="592" y="604" font-size="11" text-anchor="end" font-weight="normal" fill="#222222">SDO (MISO)</text>
+<polyline points="604,600 696,600" fill="none" stroke="#1f77b4" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1340" y="330" width="250" height="350" rx="6" fill="#ffffff" stroke="#455a64" stroke-width="2"/>
+<text x="1356" y="640" font-size="11.5" text-anchor="start" font-weight="normal" fill="#222222">Micro-SD-Modul</text>
+<text x="1356" y="656" font-size="11.5" text-anchor="start" font-weight="normal" fill="#222222">SD_MMC 1-Bit · steckt auf J1</text>
+<text x="1356" y="672" font-size="11.5" text-anchor="start" font-weight="normal" fill="#222222">Projekte + WAVs (Plan C3)</text>
+<rect x="1336" y="356" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1348" y="364" font-size="11" text-anchor="start" font-weight="normal" fill="#222">3V3</text>
+<polyline points="1244,360 1336,360" fill="none" stroke="#ff7f0e" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1336" y="386" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1348" y="394" font-size="11" text-anchor="start" font-weight="normal" fill="#222">GND</text>
+<polyline points="1244,390 1336,390" fill="none" stroke="#222222" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1336" y="416" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1348" y="424" font-size="11" text-anchor="start" font-weight="normal" fill="#222">CLK</text>
+<polyline points="1244,420 1336,420" fill="none" stroke="#9467bd" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1336" y="446" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1348" y="454" font-size="11" text-anchor="start" font-weight="normal" fill="#222">D0</text>
+<polyline points="1244,450 1336,450" fill="none" stroke="#9467bd" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1336" y="476" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1348" y="484" font-size="11" text-anchor="start" font-weight="normal" fill="#222">CMD</text>
+<polyline points="1244,480 1336,480" fill="none" stroke="#9467bd" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1336" y="506" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1348" y="514" font-size="11" text-anchor="start" font-weight="normal" fill="#9a9a9a">D3</text>
+<polyline points="1244,510 1336,510" fill="none" stroke="#9a9a9a" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 4"/>
+<rect x="1336" y="536" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1348" y="544" font-size="11" text-anchor="start" font-weight="normal" fill="#9a9a9a">D1</text>
+<polyline points="1244,540 1336,540" fill="none" stroke="#9a9a9a" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 4"/>
+<rect x="1336" y="566" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1348" y="574" font-size="11" text-anchor="start" font-weight="normal" fill="#9a9a9a">D2</text>
+<polyline points="1244,570 1336,570" fill="none" stroke="#9a9a9a" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 4"/>
+<rect x="1336" y="596" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1348" y="604" font-size="11" text-anchor="start" font-weight="normal" fill="#9a9a9a">DET</text>
+<polyline points="1244,600 1336,600" fill="none" stroke="#9a9a9a" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 4"/>
+<rect x="820" y="110" width="300" height="125" rx="6" fill="#ffffff" stroke="#455a64" stroke-width="2"/>
+<text x="834" y="132" font-size="12" text-anchor="start" font-weight="bold" fill="#222222">Drehencoder KY-040 mit Taster</text>
+<text x="834" y="149" font-size="10.5" text-anchor="start" font-weight="normal" fill="#555">Drehen = Auswahl · Drücken = Play/Pause/Menü</text>
+<rect x="886" y="231" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="890" y="225" font-size="10.5" text-anchor="middle" font-weight="normal" fill="#222222">GND</text>
+<polyline points="890,239 890,296" fill="none" stroke="#222222" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="926" y="231" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="930" y="225" font-size="10.5" text-anchor="middle" font-weight="normal" fill="#222222">+</text>
+<polyline points="930,239 930,296" fill="none" stroke="#ff7f0e" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="966" y="231" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="970" y="225" font-size="10.5" text-anchor="middle" font-weight="normal" fill="#222222">SW</text>
+<polyline points="970,239 970,296" fill="none" stroke="#9467bd" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1006" y="231" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1010" y="225" font-size="10.5" text-anchor="middle" font-weight="normal" fill="#222222">DT</text>
+<polyline points="1010,239 1010,296" fill="none" stroke="#9467bd" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1046" y="231" width="8" height="8" fill="#ffffff" stroke="#444444" stroke-width="1.5"/>
+<text x="1050" y="225" font-size="10.5" text-anchor="middle" font-weight="normal" fill="#222222">CLK</text>
+<polyline points="1050,239 1050,296" fill="none" stroke="#9467bd" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1050" y="740" font-size="10" text-anchor="start" font-weight="normal" fill="#b26a00">* SQW → GPIO5 real verbunden,</text>
+<text x="1050" y="753" font-size="10" text-anchor="start" font-weight="normal" fill="#b26a00">fehlt im KiCad-Schaltplan</text>
+<rect x="830" y="960" width="200" height="80" rx="6" fill="#ffffff" stroke="#8c564b" stroke-width="2"/>
+<text x="930" y="984" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">Timecode-Partner</text>
+<text x="930" y="1000" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">Kamera / Recorder / ARC-Slate</text>
+<text x="930" y="1016" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">(Jam Sync: J2 ↔ J2)</text>
+<polyline points="920,850 920,960" fill="none" stroke="#8c564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1060" y="960" width="200" height="80" rx="6" fill="#ffffff" stroke="#8c564b" stroke-width="2"/>
+<text x="1160" y="984" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">Lautsprecher / Mischpult</text>
+<text x="1160" y="1000" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">Song-Zuspielung (Line)</text>
+<text x="1160" y="1016" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222"></text>
+<polyline points="1100,850 1100,960" fill="none" stroke="#8c564b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="480" y="960" width="220" height="80" rx="6" fill="#ffffff" stroke="#d62728" stroke-width="2"/>
+<text x="590" y="984" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">USB-Netzteil / Powerbank 5 V</text>
+<text x="590" y="1000" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">→ USB-C am DevKit</text>
+<text x="590" y="1016" font-size="11" text-anchor="middle" font-weight="normal" fill="#222222">(aktuelle Stromversorgung)</text>
+<polyline points="1010,612 1010,900 590,900 590,960" fill="none" stroke="#d62728" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="600" y="893" font-size="10" text-anchor="start" font-weight="normal" fill="#d62728">USB-C-Kabel 5 V</text>
+<text x="720" y="860" font-size="10" text-anchor="start" font-weight="normal" fill="#9a9a9a">J4 optional: externe 3,3 V –</text>
+<text x="720" y="874" font-size="10" text-anchor="start" font-weight="normal" fill="#9a9a9a">nie gleichzeitig mit USB</text>
+<rect x="1290" y="1005" width="580" height="130" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
+<text x="1304" y="1029" font-size="13" text-anchor="start" font-weight="bold" fill="#222222">Hinweise</text>
+<text x="1304" y="1053" font-size="11.5" text-anchor="start" font-weight="normal" fill="#222222">• Stromversorgung derzeit nur über USB-C; J4 speist direkt die 3V3-Schiene (nicht parallel zu USB).</text>
+<text x="1304" y="1071" font-size="11.5" text-anchor="start" font-weight="normal" fill="#222222">• * DS3231-SQW → GPIO5 vorhanden, im KiCad-Schaltplan fehlt die Verbindung → dort nachtragen.</text>
+<text x="1304" y="1089" font-size="11.5" text-anchor="start" font-weight="normal" fill="#222222">• J2 = TC-Ein- und Ausgang am selben Knoten: im Slave/Jam ist der DAC stumm (XSMT, GPIO3).</text>
+<text x="1304" y="1107" font-size="11.5" text-anchor="start" font-weight="normal" fill="#222222">• LM358 an 3,3 V arbeitet am Limit (Ausgang ~1,8 V) – Eingangspegel testen (Plan A5.4).</text>
+<text x="1304" y="1125" font-size="11.5" text-anchor="start" font-weight="normal" fill="#222222">• GPIO35–37 sind beim N16R8 vom PSRAM belegt.</text>
+</svg>
