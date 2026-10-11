@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--/20521963/2019848/2.50/44/4/Undefined or Miscellaneous/-->
+<!DOCTYPE curve SYSTEM "eagle.dtd">
+<eagle version="7.7.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<description>&lt;Multiprotocol Development Tools The ESP32-S3-DevKitC-1 is an entry-level development board equipped with ESP32-S3-WROOM-1, ESP32-S3-WROOM-1U, or ESP32-S3-WROOM-2, a general-purpose Wi-Fi + Bluetooth Low Energy MCU module that integrates complete Wi-Fi and Bluetooth Low Energy funct&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
+<packages>
+<package name="ESP32S3DevKitC1N32R16V">
+<description>&lt;b&gt;ESP32-S3-DevKitC-1-N32R16V-1&lt;/b&gt;&lt;br&gt;
+</description>
+<pad name="J111" x="0.000" y="0.000" drill="1.11" diameter="1.665" shape="square"/>
+<pad name="J112" x="0.000" y="-2.540" drill="1.11" diameter="1.665"/>
+<pad name="J113" x="0.000" y="-5.080" drill="1.11" diameter="1.665"/>
+<pad name="J114" x="0.000" y="-7.620" drill="1.11" diameter="1.665"/>
+<pad name="J115" x="0.000" y="-10.160" drill="1.11" diameter="1.665"/>
+<pad name="J116" x="0.000" y="-12.700" drill="1.11" diameter="1.665"/>
+<pad name="J117" x="0.000" y="-15.240" drill="1.11" diameter="1.665"/>
+<pad name="J118" x="0.000" y="-17.780" drill="1.11" diameter="1.665"/>
+<pad name="J119" x="0.000" y="-20.320" drill="1.11" diameter="1.665"/>
+<pad name="J120" x="0.000" y="-22.860" drill="1.11" diameter="1.665"/>
+<pad name="J121" x="0.000" y="-25.400" drill="1.11" diameter="1.665"/>
+<pad name="J122" x="0.000" y="-27.940" drill="1.11" diameter="1.665"/>
+<pad name="J123" x="0.000" y="-30.480" drill="1.11" diameter="1.665"/>
+<pad name="J124" x="0.000" y="-33.020" drill="1.11" diameter="1.665"/>
+<pad name="J125" x="0.000" y="-35.560" drill="1.11" diameter="1.665"/>
+<pad name="J126" x="0.000" y="-38.100" drill="1.11" diameter="1.665"/>
+<pad name="J127" x="0.000" y="-40.640" drill="1.11" diameter="1.665"/>
+<pad name="J128" x="0.000" y="-43.180" drill="1.11" diameter="1.665"/>
+<pad name="J129" x="0.000" y="-45.720" drill="1.11" diameter="1.665"/>
+<pad name="J130" x="0.000" y="-48.260" drill="1.11" diameter="1.665"/>
+<pad name="J131" x="0.000" y="-50.800" drill="1.11" diameter="1.665"/>
+<pad name="J132" x="0.000" y="-53.340" drill="1.11" diameter="1.665"/>
+<pad name="J311" x="22.860" y="0.000" drill="1.11" diameter="1.665"/>
+<pad name="J312" x="22.860" y="-2.540" drill="1.11" diameter="1.665"/>
+<pad name="J313" x="22.860" y="-5.080" drill="1.11" diameter="1.665"/>
+<pad name="J314" x="22.860" y="-7.620" drill="1.11" diameter="1.665"/>
+<pad name="J315" x="22.860" y="-10.160" drill="1.11" diameter="1.665"/>
+<pad name="J316" x="22.860" y="-12.700" drill="1.11" diameter="1.665"/>
+<pad name="J317" x="22.860" y="-15.240" drill="1.11" diameter="1.665"/>
+<pad name="J318" x="22.860" y="-17.780" drill="1.11" diameter="1.665"/>
+<pad name="J319" x="22.860" y="-20.320" drill="1.11" diameter="1.665"/>
+<pad name="J320" x="22.860" y="-22.860" drill="1.11" diameter="1.665"/>
+<pad name="J321" x="22.860" y="-25.400" drill="1.11" diameter="1.665"/>
+<pad name="J322" x="22.860" y="-27.940" drill="1.11" diameter="1.665"/>
+<pad name="J323" x="22.860" y="-30.480" drill="1.11" diameter="1.665"/>
+<pad name="J324" x="22.860" y="-33.020" drill="1.11" diameter="1.665"/>
+<pad name="J325" x="22.860" y="-35.560" drill="1.11" diameter="1.665"/>
+<pad name="J326" x="22.860" y="-38.100" drill="1.11" diameter="1.665"/>
+<pad name="J327" x="22.860" y="-40.640" drill="1.11" diameter="1.665"/>
+<pad name="J328" x="22.860" y="-43.180" drill="1.11" diameter="1.665"/>
+<pad name="J329" x="22.860" y="-45.720" drill="1.11" diameter="1.665"/>
+<pad name="J330" x="22.860" y="-48.260" drill="1.11" diameter="1.665"/>
+<pad name="J331" x="22.860" y="-50.800" drill="1.11" diameter="1.665"/>
+<pad name="J332" x="22.860" y="-53.340" drill="1.11" diameter="1.665"/>
+<text x="11.430" y="-29.970" align="center" size="1.27" layer="25" rot="R0" >&gt;NAME</text>
+<text x="11.430" y="-29.970" align="center" size="1.27" layer="27" rot="R0" >&gt;VALUE</text>
+<wire x1="-1.27" y1="1.4" x2="24.13" y2="1.4" width="0.1" layer="51"/>
+<wire x1="24.13" y1="1.4" x2="24.13" y2="-61.34" width="0.1" layer="51"/>
+<wire x1="24.13" y1="-61.34" x2="-1.27" y2="-61.34" width="0.1" layer="51"/>
+<wire x1="-1.27" y1="-61.34" x2="-1.27" y2="1.4" width="0.1" layer="51"/>
+<wire x1="-1.27" y1="1.4" x2="24.13" y2="1.4" width="0.2" layer="21"/>
+<wire x1="24.13" y1="1.4" x2="24.13" y2="-61.34" width="0.2" layer="21"/>
+<wire x1="24.13" y1="-61.34" x2="-1.27" y2="-61.34" width="0.2" layer="21"/>
+<wire x1="-1.27" y1="-61.34" x2="-1.27" y2="1.4" width="0.2" layer="21"/>
+<wire x1="-2.27" y1="2.4" x2="25.13" y2="2.4" width="0.1" layer="51"/>
+<wire x1="25.13" y1="2.4" x2="25.13" y2="-62.34" width="0.1" layer="51"/>
+<wire x1="25.13" y1="-62.34" x2="-2.27" y2="-62.34" width="0.1" layer="51"/>
+<wire x1="-2.27" y1="-62.34" x2="-2.27" y2="2.4" width="0.1" layer="51"/>
+<wire x1="-1.8" y1="0" x2="-1.8" y2="0" width="0.1" layer="21"/>
+<wire x1="-1.800" y1="0.000" x2="-1.900" y2="0.000" width="0.1" layer="21" curve="180.0"/>
+<wire x1="-1.9" y1="0" x2="-1.9" y2="0" width="0.1" layer="21"/>
+<wire x1="-1.900" y1="0.000" x2="-1.800" y2="0.000" width="0.1" layer="21" curve="180.0"/>
+</package>
+</packages>
+<symbols>
+<symbol name="ESP32-S3-DEVKITC-1-N32R16V">
+<wire x1="5.08" y1="2.54" x2="22.86" y2="2.54" width="0.254" layer="94"/>
+<wire x1="22.86" y1="-55.88" x2="22.86" y2="2.54" width="0.254" layer="94"/>
+<wire x1="22.86" y1="-55.88" x2="5.08" y2="-55.88" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-55.88" width="0.254" layer="94"/>
+<text x="24.13" y="7.62" align="center-left" size="1.778" layer="95">&gt;NAME</text>
+<text x="24.13" y="5.08" align="center-left" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="3V3_1" x="0" y="0" length="middle" direction="io" rot="R0"/>
+<pin name="3V3_2" x="0" y="-2.54" length="middle" direction="io" rot="R0"/>
+<pin name="RST" x="0" y="-5.08" length="middle" direction="io" rot="R0"/>
+<pin name="4" x="0" y="-7.62" length="middle" direction="io" rot="R0"/>
+<pin name="5" x="0" y="-10.16" length="middle" direction="io" rot="R0"/>
+<pin name="6" x="0" y="-12.7" length="middle" direction="io" rot="R0"/>
+<pin name="7" x="0" y="-15.24" length="middle" direction="io" rot="R0"/>
+<pin name="15" x="0" y="-17.78" length="middle" direction="io" rot="R0"/>
+<pin name="16" x="0" y="-20.32" length="middle" direction="io" rot="R0"/>
+<pin name="17" x="0" y="-22.86" length="middle" direction="io" rot="R0"/>
+<pin name="18" x="0" y="-25.4" length="middle" direction="io" rot="R0"/>
+<pin name="8" x="0" y="-27.94" length="middle" direction="io" rot="R0"/>
+<pin name="3" x="0" y="-30.48" length="middle" direction="io" rot="R0"/>
+<pin name="46" x="0" y="-33.02" length="middle" direction="io" rot="R0"/>
+<pin name="9" x="0" y="-35.56" length="middle" direction="io" rot="R0"/>
+<pin name="10" x="0" y="-38.1" length="middle" direction="io" rot="R0"/>
+<pin name="11" x="0" y="-40.64" length="middle" direction="io" rot="R0"/>
+<pin name="12" x="0" y="-43.18" length="middle" direction="io" rot="R0"/>
+<pin name="13" x="0" y="-45.72" length="middle" direction="io" rot="R0"/>
+<pin name="14" x="0" y="-48.26" length="middle" direction="io" rot="R0"/>
+<pin name="5V" x="0" y="-50.8" length="middle" direction="io" rot="R0"/>
+<pin name="G_1" x="0" y="-53.34" length="middle" direction="io" rot="R0"/>
+<pin name="G_2" x="27.94" y="0" length="middle" direction="io" rot="R180"/>
+<pin name="TX" x="27.94" y="-2.54" length="middle" direction="io" rot="R180"/>
+<pin name="RX" x="27.94" y="-5.08" length="middle" direction="io" rot="R180"/>
+<pin name="1" x="27.94" y="-7.62" length="middle" direction="io" rot="R180"/>
+<pin name="2" x="27.94" y="-10.16" length="middle" direction="io" rot="R180"/>
+<pin name="42" x="27.94" y="-12.7" length="middle" direction="io" rot="R180"/>
+<pin name="41" x="27.94" y="-15.24" length="middle" direction="io" rot="R180"/>
+<pin name="40" x="27.94" y="-17.78" length="middle" direction="io" rot="R180"/>
+<pin name="39" x="27.94" y="-20.32" length="middle" direction="io" rot="R180"/>
+<pin name="38" x="27.94" y="-22.86" length="middle" direction="io" rot="R180"/>
+<pin name="37" x="27.94" y="-25.4" length="middle" direction="io" rot="R180"/>
+<pin name="36" x="27.94" y="-27.94" length="middle" direction="io" rot="R180"/>
+<pin name="35" x="27.94" y="-30.48" length="middle" direction="io" rot="R180"/>
+<pin name="0" x="27.94" y="-33.02" length="middle" direction="io" rot="R180"/>
+<pin name="45" x="27.94" y="-35.56" length="middle" direction="io" rot="R180"/>
+<pin name="48" x="27.94" y="-38.1" length="middle" direction="io" rot="R180"/>
+<pin name="47" x="27.94" y="-40.64" length="middle" direction="io" rot="R180"/>
+<pin name="21" x="27.94" y="-43.18" length="middle" direction="io" rot="R180"/>
+<pin name="20" x="27.94" y="-45.72" length="middle" direction="io" rot="R180"/>
+<pin name="19" x="27.94" y="-48.26" length="middle" direction="io" rot="R180"/>
+<pin name="G_3" x="27.94" y="-50.8" length="middle" direction="io" rot="R180"/>
+<pin name="G_4" x="27.94" y="-53.34" length="middle" direction="io" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="ESP32-S3-DEVKITC-1-N32R16V" prefix="U">
+<description>&lt;b&gt;Multiprotocol Development Tools The ESP32-S3-DevKitC-1 is an entry-level development board equipped with ESP32-S3-WROOM-1, ESP32-S3-WROOM-1U, or ESP32-S3-WROOM-2, a general-purpose Wi-Fi + Bluetooth Low Energy MCU module that integrates complete Wi-Fi and Bluetooth Low Energy funct&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp-dev-kits-en-master-esp32s3.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="ESP32-S3-DEVKITC-1-N32R16V" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ESP32S3DevKitC1N32R16V">
+<connects>
+<connect gate="G$1" pin="3V3_1" pad="J111"/>
+<connect gate="G$1" pin="3V3_2" pad="J112"/>
+<connect gate="G$1" pin="RST" pad="J113"/>
+<connect gate="G$1" pin="4" pad="J114"/>
+<connect gate="G$1" pin="5" pad="J115"/>
+<connect gate="G$1" pin="6" pad="J116"/>
+<connect gate="G$1" pin="7" pad="J117"/>
+<connect gate="G$1" pin="15" pad="J118"/>
+<connect gate="G$1" pin="16" pad="J119"/>
+<connect gate="G$1" pin="17" pad="J120"/>
+<connect gate="G$1" pin="18" pad="J121"/>
+<connect gate="G$1" pin="8" pad="J122"/>
+<connect gate="G$1" pin="3" pad="J123"/>
+<connect gate="G$1" pin="46" pad="J124"/>
+<connect gate="G$1" pin="9" pad="J125"/>
+<connect gate="G$1" pin="10" pad="J126"/>
+<connect gate="G$1" pin="11" pad="J127"/>
+<connect gate="G$1" pin="12" pad="J128"/>
+<connect gate="G$1" pin="13" pad="J129"/>
+<connect gate="G$1" pin="14" pad="J130"/>
+<connect gate="G$1" pin="5V" pad="J131"/>
+<connect gate="G$1" pin="G_1" pad="J132"/>
+<connect gate="G$1" pin="G_2" pad="J311"/>
+<connect gate="G$1" pin="TX" pad="J312"/>
+<connect gate="G$1" pin="RX" pad="J313"/>
+<connect gate="G$1" pin="1" pad="J314"/>
+<connect gate="G$1" pin="2" pad="J315"/>
+<connect gate="G$1" pin="42" pad="J316"/>
+<connect gate="G$1" pin="41" pad="J317"/>
+<connect gate="G$1" pin="40" pad="J318"/>
+<connect gate="G$1" pin="39" pad="J319"/>
+<connect gate="G$1" pin="38" pad="J320"/>
+<connect gate="G$1" pin="37" pad="J321"/>
+<connect gate="G$1" pin="36" pad="J322"/>
+<connect gate="G$1" pin="35" pad="J323"/>
+<connect gate="G$1" pin="0" pad="J324"/>
+<connect gate="G$1" pin="45" pad="J325"/>
+<connect gate="G$1" pin="48" pad="J326"/>
+<connect gate="G$1" pin="47" pad="J327"/>
+<connect gate="G$1" pin="21" pad="J328"/>
+<connect gate="G$1" pin="20" pad="J329"/>
+<connect gate="G$1" pin="19" pad="J330"/>
+<connect gate="G$1" pin="G_3" pad="J331"/>
+<connect gate="G$1" pin="G_4" pad="J332"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="Manufacturer_Name" value="Espressif Systems" constant="no"/>
+<attribute name="Manufacturer_Part_Number" value="ESP32-S3-DevKitC-1-N32R16V" constant="no"/>
+<attribute name="Mouser_Part_Number" value="356-32S3DKTC1N32R16V" constant="no"/>
+<attribute name="Mouser_Price-Stock" value="https://www.mouser.co.uk/ProductDetail/Espressif-Systems/ESP32-S3-DevKitC-1-N32R16V?qs=sqEgtWRSLJ3pTWIVKUeIew%3D%3D" constant="no"/>
+<attribute name="Arrow_Part_Number" value="" constant="no"/>
+<attribute name="Arrow_Price-Stock" value="" constant="no"/>
+<attribute name="Description" value="Multiprotocol Development Tools The ESP32-S3-DevKitC-1 is an entry-level development board equipped with ESP32-S3-WROOM-1, ESP32-S3-WROOM-1U, or ESP32-S3-WROOM-2, a general-purpose Wi-Fi + Bluetooth Low Energy MCU module that integrates complete Wi-Fi and Bluetooth Low Energy funct" constant="no"/>
+<attribute name="Height" value="5mm" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

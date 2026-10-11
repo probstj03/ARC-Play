@@ -1,0 +1,17 @@
+# PlatformIO
+.pio/
+.vscode/.browse.c_cpp.db*
+.vscode/ipch
+
+# KiCad
+*-backups/
+*.lck
+fp-info-cache
+
+# FreeCAD-Backups
+*.FCBak
+*.FCStd1
+
+# System
+.DS_Store
+Thumbs.db

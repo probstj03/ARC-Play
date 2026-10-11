@@ -1,0 +1,9 @@
+Manufacturer=Espressif Systems
+PartNumber=ESP32-S3-DevKitC-1-N32R16V
+PartCategory=Undefined or Miscellaneous
+PackageCategory=Other
+PinCount=44
+Version=1.8
+Released=2025-10-05 17:30:42
+Downloaded=2026-03-31 15:20:16
+3D=Y

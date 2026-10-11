@@ -1,0 +1,19 @@
+.ESP32-S3-DevKitC-1-N32R16V :1 ;Multiprotocol Development Tools The ESP32-S3-DevKitC-1 is an entry-level development board equipped with ESP32-S3-WROOM-1, ESP32-S3-WROOM-1U, or ESP32-S3-WROOM-2, a general-purpose Wi-Fi + Bluetooth Low Energy MCU module that integrates complete Wi-Fi and Bluetooth Low Energy funct
+ESP32S3DevKitC1N32R16V
+*STM U
+*NGS
+*PNM 1=J111 2=J112 3=J113 4=J114 5=J115 6=J116 7=J117 8=J118 9=J119 10=J120 11=J121 12=J122 13=J123 14=J124 15=J125 16=J126 17=J127 18=J128 19=J129 20=J130 21=J131 22=J132 23=J311 24=J312 25=J313 26=J314 27=J315 28=J316 29=J317 30=J318 31=J319 32=J320 33=J321 34=J322 35=J323 36=J324 37=J325 38=J326 39=J327 40=J328 41=J329 42=J330 43=J331 44=J332
+*PLB 1="3V3_1" 2="3V3_2" 3="RST" 4="4" 5="5" 6="6" 7="7" 8="15" 9="16" 10="17" 11="18" 12="8" 13="3" 14="46" 15="9" 16="10" 17="11" 18="12" 19="13" 20="14" 21="5V" 22="G_1" 23="G_2" 24="TX" 25="RX" 26="1" 27="2" 28="42" 29="41" 30="40" 31="39" 32="38" 33="37" 34="36" 35="35" 36="0" 37="45" 38="48" 39="47" 40="21" 41="20" 42="19" 43="G_3" 44="G_4"
+*MXP 44
+*DFN ESP32-S3-DevKitC-1-N32R16V
+~!Manufacturer_Name (Espressif Systems)
+~!Manufacturer_Part_Number (ESP32-S3-DevKitC-1-N32R16V)
+~!Mouser Part Number (356-32S3DKTC1N32R16V)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Espressif-Systems/ESP32-S3-DevKitC-1-N32R16V?qs=sqEgtWRSLJ3pTWIVKUeIew%3D%3D)
+~!Arrow Part Number (-)
+~!Arrow Price/Stock (-)
+~!Link Datasheet (https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp-dev-kits-en-master-esp32s3.pdf)
+~!Height (5mm)
+~!3D_Model (ESP32-S3-DevKitC-1-N32R16V)
+ESP32-S3-DevKitC-1-N32R16V
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 14.1!U 15.1!U 16.1!U 17.1!U 18.1!U 19.1!U 20.1!U 21.1!U 22.1!U 23.1!U 24.1!U 25.1!U 26.1!U 27.1!U 28.1!U 29.1!U 30.1!U 31.1!U 32.1!U 33.1!U 34.1!U 35.1!U 36.1!U 37.1!U 38.1!U 39.1!U 40.1!U 41.1!U 42.1!U 43.1!U 44.1!U 
