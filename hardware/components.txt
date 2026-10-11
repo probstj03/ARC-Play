@@ -1,0 +1,48 @@
+ARC-Play – Hardware-Komponenten
+================================
+
+Mikrocontroller
+---------------
+U1   ESP32-S3-DevKitC-1                Hauptcontroller (WLAN, I2S, SD_MMC, SPI)
+                                       Firmware-Kommentar: N16R8
+
+Audio / Timecode
+----------------
+U7   PCM5102A Audio-DAC (I2S)          LTC- und WAV-Ausgabe
+                                       BCK GPIO18, LRCK GPIO17, DIN GPIO16, XSMT (Mute) GPIO3
+U3   LM358 Operationsverstärker        Eingangsstufe für eingehenden LTC
+U6   SN74HC14N Schmitt-Trigger         Signalaufbereitung LTC-Eingang -> GPIO4
+J2   3,5 mm Klinkenbuchse (TRS)        "TC In/Out" – Timecode-Ein-/Ausgang
+R1   100 kΩ                            Widerstand (THT, 0207)
+R2   100 kΩ                            Widerstand (THT, 0207)
+R3   1 MΩ                              Widerstand (THT, 0207)
+R4   10 kΩ                             Widerstand (THT, 0207)
+C1   10 nF                             Kondensator
+C2   10 nF                             Kondensator
+
+Echtzeituhr
+-----------
+U2   DS3231(M) RTC-Modul               I2C: SDA GPIO42, SCL GPIO41, SQW (1 Hz) GPIO5
+     CR2032-Knopfzelle für RTC         [?] falls Modul mit Batteriehalter
+
+Speicher
+--------
+J1   Micro-SD-Kartenmodul              SD_MMC 1-Bit: CLK GPIO14, CMD GPIO15, D0 GPIO2
+     Micro-SD-Karte                    WAV-Dateien / Projektdaten
+
+Anzeige / Bedienung
+-------------------
+U4   2,4" TFT-Display 320x240          ILI9341, SPI, mit Touch (Touch nicht verwendet)
+                                       MOSI GPIO11, SCLK GPIO12, MISO GPIO13, CS GPIO10,
+                                       DC GPIO9, RST GPIO8, Backlight GPIO7
+SW1  Drehencoder mit Taster (KY-040)   CLK GPIO38, DT GPIO39, SW GPIO40
+
+Stromversorgung
+---------------
+J4   Stromversorgungs-Anschluss (2-pin) bisher nur USB
+
+Mechanik
+--------
+     Platine ARC_AP (eigene Leiterplatte)
+     3D-Druck-Gehäuse: Korpus + Deckel (hardware/3D-Druck/ARC_Play.FCStd)
+     Stiftleisten / Buchsenleisten 2,54 mm (für Module)
