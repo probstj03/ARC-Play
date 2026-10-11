@@ -91,11 +91,12 @@
 // Add / remove networks as needed – tried in order, first success wins
 struct WifiCred { const char* ssid; const char* pass; };
 static const WifiCred kWifiNetworks[] = {
+    {"ARC", "0123456789" },
     { "WLAN-828327",       "35074216513574635873" },
     { "Berserker", "76915661820278777668" },
     { "MagentaWLAN-R38Y", "88255808344892594692"},
     { "JULIAN-IPHONE", "12345678909"},
-    {"HAW-WLAN", "VXAD-uk73-E3TL-u37g"},
+    {"Probst", "9578674513537646"},
 };
 static const int kWifiCount = sizeof(kWifiNetworks) / sizeof(kWifiNetworks[0]);
 #define NTP_SERVER1    "pool.ntp.org"
@@ -148,6 +149,7 @@ static float    g_songBpm    = 0.0f;            // BPM from songinfo.json
 static int      g_songTimeSig = 4;              // time signature numerator from songinfo.json
 static volatile uint32_t g_jamOkCnt     = 0;    // consecutive valid jam frames
 static volatile bool     g_rtcSyncDue   = false;// RTC SQW ISR flag: sync now
+static volatile uint32_t g_lastSqwMicros = 0;   // micros() at last SQW rising edge
 static volatile bool     g_ltcStdDirty  = false;// LTC standard change pending
 static volatile bool     g_countInActive = false; // true while 8-beat count-in is running
 
@@ -250,6 +252,7 @@ static void parseTC(String tcStr, uint8_t &h, uint8_t &m, uint8_t &s, uint8_t &f
 
 // ── RTC Steuerung ──────────────────────────────────────────────────────────
 void IRAM_ATTR onSqwRising() {
+    g_lastSqwMicros = micros();  // timestamp of last full second
     g_rtcSyncDue = true;
 }
 
@@ -509,6 +512,71 @@ static void applyCurrentUserBits(LTCEncoder *enc) {
 // Forward declaration: applies current user bits to the active encoder.
 // Full definition is below, after both LTCGenerator and LTCMixerOutput are defined.
 static void applyCurrentUserBitsToActiveEncoder();
+
+// ── Precise Timestamp Helpers ──────────────────────────────────────────────
+// Combines DS3231 RTC (full seconds) with micros() offset since last SQW 1Hz
+// pulse to achieve millisecond-accurate timestamps without blocking the main
+// program or audio pipeline.
+
+struct PreciseTime {
+    uint8_t  hour, minute, second;
+    uint16_t millis;  // 0–999
+    uint16_t year;
+    uint8_t  month, day;
+};
+
+// Reads the current time with millisecond precision.
+// Uses rtc.now() for full seconds and interpolates with micros() since the
+// last SQW rising edge. Non-blocking: uses try-take on I2C mutex.
+// Returns false if I2C bus is busy (caller should retry or skip timestamp).
+static bool getPreciseTime(PreciseTime &pt) {
+    uint32_t sqwMicros;
+    DateTime now;
+
+    // Non-blocking try-take: if I2C is busy, skip timestamp (don't block audio)
+    if (xSemaphoreTake(g_i2cMtx, 0) != pdTRUE) return false;
+    now = rtc.now();
+    sqwMicros = g_lastSqwMicros;  // volatile read
+    xSemaphoreGive(g_i2cMtx);
+
+    // Milliseconds elapsed since last SQW pulse (= last full second)
+    uint32_t elapsed = (micros() - sqwMicros) / 1000;  // µs → ms
+
+    // Guard: if SQW never fired or >1s elapsed, clamp to 999ms
+    if (elapsed > 999) elapsed = 999;
+
+    pt.hour   = now.hour();
+    pt.minute = now.minute();
+    pt.second = now.second();
+    pt.millis = (uint16_t)elapsed;
+    pt.year   = now.year();
+    pt.month  = now.month();
+    pt.day    = now.day();
+    return true;
+}
+
+// Formats a PreciseTime as ISO-8601 string with milliseconds and timezone.
+// Example: "2026-06-06T14:30:25.342+0200"
+// Buffer must be at least 28 bytes.
+static void formatTimestamp(const PreciseTime &pt, char *buf, size_t bufSize) {
+    const char* tz = currentTZString();  // "+0100" or "+0200"
+    snprintf(buf, bufSize,
+             "%04u-%02u-%02uT%02u:%02u:%02u.%03u%s",
+             pt.year, pt.month, pt.day,
+             pt.hour, pt.minute, pt.second, pt.millis,
+             tz);
+}
+
+// Convenience: adds a "timestamp" field to a JsonDocument if time is available.
+// Non-blocking: silently skips if I2C is busy.
+static void addTimestampToDoc(JsonDocument &doc) {
+    PreciseTime pt;
+    if (getPreciseTime(pt)) {
+        char tsBuf[32];
+        formatTimestamp(pt, tsBuf, sizeof(tsBuf));
+        doc["timestamp"] = tsBuf;
+    }
+}
 
 // ── LTC Generator (encode-only modes) ────────────────────────────────────
 // Generates a bi-phase mark LTC audio stream via the AudioTools SoundGenerator
@@ -1325,7 +1393,7 @@ void taskLTC(void *) {
 // MENU_SETTINGS : full-screen list (Mode / Framerate / Sync RTC / Format SD / Close)
 // MENU_MODE     : sub-list for mode selection
 // MENU_FPS      : sub-list for framerate selection
-// MENU_FORMAT_SD: confirmation screen before formatting the SD card
+// MENU_FORMAT_SD: confirmation screen before formatting the SD card    
 enum MenuState { MENU_CLOSED, MENU_OVERLAY, MENU_SETTINGS, MENU_MODE, MENU_FPS, MENU_FORMAT_SD, MENU_SHOT_BROWSE };
 static MenuState g_menuState = MENU_CLOSED;
 static int g_menuSel = 0;
@@ -1381,6 +1449,8 @@ void broadcastStatus() {
     char tcBuf[12];
     snprintf(tcBuf, sizeof(tcBuf), "%02d:%02d:%02d:%02d", g_tc_h, g_tc_m, g_tc_s, g_tc_f);
     doc["timecode"] = tcBuf;
+    // Add precise timestamp with millisecond accuracy
+    addTimestampToDoc(doc);
     String out; serializeJson(doc, out);
     ws.textAll(out);
 }
@@ -2377,6 +2447,9 @@ void onWebSocketEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsE
         // NOTE: Timecode is intentionally NOT included in init_sync.
         // Each device runs independently on its own RTC. Timecode is only
         // transmitted on actions (broadcastStatus) for display purposes only.
+        
+        // Add precise timestamp with millisecond accuracy
+        addTimestampToDoc(doc);
 
         String jsonStr;
         serializeJson(doc, jsonStr);
@@ -2575,6 +2648,9 @@ void loop() {
             char dateBuf[16];
             snprintf(dateBuf, sizeof(dateBuf), "%02d.%02d.%04d", nowTime.day(), nowTime.month(), nowTime.year());
             doc["date"] = dateBuf;
+            
+            // Add precise timestamp with millisecond accuracy
+            addTimestampToDoc(doc);
             
             String outStr;
             serializeJson(doc, outStr);
