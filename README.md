@@ -48,7 +48,7 @@ Bildraten: 24, 25, 29.97 DF, 30. Kanäle: links = Song (J3), rechts = LTC (J2).
 **Bedienung:**
 - Drehen = Lautstärke
 - Klick = Play/Pause (nach einem Jam: „Kabel abgezogen“ bestätigen)
-- Doppelklick = Shot-Auswahl über ARC-Studio
+- Doppelklick = Shot-Auswahl, über ARC-Studio oder ohne Verbindung aus dem gespeicherten Offline-Projekt
 - Lang drücken = Einstellungen: Modus, Bildrate, NTP, SD-Karte leeren
 
 **Protokoll:** WebSocket `ws://<ip>/ws`, Protokoll v2 aus ARC-Core.
@@ -64,4 +64,5 @@ Bildraten: 24, 25, 29.97 DF, 30. Kanäle: links = Song (J3), rechts = LTC (J2).
   - Stopp am Shot-Ende
   - Jam Sync mit ARC-Slate
 - Die Ausgangslatenz der Playback-Ausgabe wird live über J2 nachgeführt. `?` zeigt Latenz und Phasenfehler.
-- Offen sind Offline-Projekte auf SD und die Leader-Rolle ohne ARC-Studio (Plan, Teil C3).
+- Offline-Projekt (aus ARC-Studio „Projekt auf Geräte“) liegt in LittleFS. Takes holt ARC-Studio beim nächsten Verbinden ab.
+- Offen ist die Leader-Rolle: Ohne ARC-Studio steuert Play die Slate direkt.

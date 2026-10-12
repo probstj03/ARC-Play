@@ -251,7 +251,41 @@ void loop() {
     }
 }
 
+namespace {
+struct TakeScan { String scene, shot; int maxTake; };
+
+bool scanTakes(JsonDocument& ev, void* ctx) {
+    TakeScan& t = *(TakeScan*)ctx;
+    if (String(ev["kind"] | "") != "take_end") return true;
+    if (String(ev["scene"] | 0) == t.scene && String(ev["shot"] | "") == t.shot) {
+        const int take = ev["take"] | 0;
+        if (take > t.maxTake) t.maxTake = take;
+    }
+    return true;
+}
+
+// Without ARC-Studio: step through the offline project stored on the device.
+void stepShotOffline(int dir) {
+    const int count = arc::project::shotCount();
+    if (count == 0) return;
+    play::lock();
+    const String scene = String(play::shot().scene);
+    const String shot = play::shot().shot;
+    play::unlock();
+    int idx = arc::project::indexOf(scene, shot);
+    idx = idx < 0 ? 0 : ((idx + dir) % count + count) % count;
+    JsonDocument msg;
+    if (!arc::project::shotMessage(idx, msg)) return;
+    TakeScan scan{String(msg["scene"].is<const char*>() ? String(msg["scene"].as<const char*>()).toInt() : msg["scene"].as<int>()),
+                  msg["shot"].as<String>(), 0};
+    arc::events::forEachAfter(0, scanTakes, &scan);
+    msg["take"] = scan.maxTake + 1;
+    handleShot(msg);
+}
+}  // namespace
+
 void requestShotStep(int dir) {
+    if (!arc::net::studioConnected()) { stepShotOffline(dir); return; }
     JsonDocument doc;
     doc["type"] = dir > 0 ? "nextShot" : "previousShot";
     doc["device"] = "play";

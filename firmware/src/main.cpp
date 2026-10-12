@@ -188,6 +188,7 @@ void setup() {
 
     play::begin();
     arc::events::begin();
+    arc::project::begin();
     playui::begin();
 
     bool falling = true;
